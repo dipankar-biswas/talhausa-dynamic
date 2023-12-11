@@ -1,0 +1,30 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
+use App\Models\
+
+class {{ class }} extends Controller
+{
+    
+    public function Index(){
+
+    }
+
+    public function Insert(){
+        
+    }
+
+    public function Update(){
+        
+    }
+
+    public function Delete(){
+        
+    }
+
+}

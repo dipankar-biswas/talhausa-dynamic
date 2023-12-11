@@ -1,0 +1,396 @@
+/* categories menus */
+header .navigation .categories {
+    position: relative;
+    height: 40px;
+}
+header .navigation .categories .menus {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 4px 4px;
+    transform-origin: left top;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+header .navigation .categories:hover .menus {
+    width: 100%;
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    z-index: 997;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+header .navigation .categories .menus .item .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+}
+header .navigation .categories .menus .item .link {
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 6px;
+}
+header .navigation .categories .menus .item:hover > .link {
+    background-color: #f2f2f2;
+    color: #ff5353;
+    transition: all 0.3s ease 0s;
+}
+header .navigation .categories .menus .item .link.active .txt {
+    color: #ff5353;
+}
+header .navigation .categories .menus .item.tree .text .arrow::before {
+    content: '';
+    border: solid #777;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    border-radius:2px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transition: all 0.3s ease 0s;
+}
+header .navigation .categories .menus .item.tree:hover .text .arrow::before {
+    content: '';
+    border: solid #777;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    border-radius:2px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    border-color: #ff5353;
+}
+header .navigation .categories .menus .item.tree .mega-menu {
+    position: absolute;
+    background-color: #fff;
+    width: auto;
+    height: 500px;
+    top: 0;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+header .navigation .categories .menus .item.tree:hover .mega-menu {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists {
+    display: flex;
+  	flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 20px;
+    padding: 15px;
+    height: 500px;
+    width: 720px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+/* Scroll */
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar {
+    height: 10px;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-thumb {
+    background-color: #f90;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-thumb:hover {
+    background-color: #ec8f02;
+}
+/* Buttons */
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button {
+    background-color: #ece4e4;
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button:hover {
+    background-color: #d0cbcb;
+}
+/* Left */
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    height: 8px;
+    width: 12px;
+    background-position: 2px 1px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(112, 112, 112)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+/* Right */
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button:horizontal:increment {
+    height: 8px;
+    width: 12px;
+    background-position: 4px 1px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(96, 96, 96)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+/* Scroll */
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section {
+    width: 219.3333px;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title {
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists {}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists .list {}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists .list .link {
+    padding: 5px 12px;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists .list .link {
+    padding: 5px 12px;
+    display: inline-block;
+}
+header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists .list .link:hover {
+    color: #ff5353;
+}
+
+
+
+
+
+
+
+
+/* ====================================== */
+/* Responsive */
+@media only screen and (max-width: 991px) {
+    
+    header .navigation .categories {
+        display: block;
+        position: fixed;
+        left: 0;
+
+    }
+    header .navigation .categories {
+        position: fixed;
+        background-color: #fff;
+        width: 0 !important;
+        height: calc(100vh - 70px) !important;
+        top: 0;
+        left: 0;
+        z-index: 998;
+        
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: 0 2px 6px rgba(47, 43, 61,.14),0 0 transparent,0 0 transparent;
+
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+    }
+    header .navigation .categories.show {
+        width: 240px !important;
+        overflow-x: visible;
+    }
+    header .navigation .categories .menus {
+        width: 100%;
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    header .navigation .categories .heading {
+        height: 40px !important;
+        background-color: #ff5353 !important;
+        padding: 6px 12px;
+    }
+    header .navigation .categories .heading .custom-btn {
+        background-color: #ff5353 !important;
+        padding: 0 !important;
+        column-gap: 6px !important;
+    }
+    header .navigation .categories .heading .custom-btn span {
+        margin-bottom: 2px;
+    }
+    .heading .close-btn {
+        color: #fff;
+    }
+    .heading .close-btn:hover,
+    .heading .close-btn:active {
+        color: #213770 !important;
+    }
+    header .navigation .categories .menus .item.tree .link {
+        width: calc(100% - 16px);
+    }
+    header .navigation .categories .menus .item.tree .arrow {
+        width: 16px;
+        text-align: center;
+    }
+    header .navigation .categories .menus .item.tree .link:hover {
+        color: #444;
+    }
+    header .navigation .categories .menus .item.tree .link.active {
+        color: #ff5353;
+    }
+    header .navigation .categories .menus .item.tree .text .arrow::before
+    header .navigation .categories .menus .item.tree:hover .text .arrow::before,
+    header .navigation .categories .menus .item.tree .arrow,
+    header .navigation .categories .menus .item.tree:hover .arrow {
+        border: none;
+        border-color: transparent;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    header .navigation .categories .menus .item.tree .text .arrow::before {
+        content: '';
+        border: solid #444;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        border-radius:2px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        border-color: #777;
+        transition: all 0.3s ease 0s;
+    }
+    header .navigation .categories .menus .item.tree .text.active .arrow::before {
+        content: '';
+        border: solid #444;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        border-radius:2px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        border-color: #ff5353;
+    }
+    header .navigation .categories .menus {
+        position: relative;
+        top: 0;
+        box-shadow: none;
+        height: calc(100vh - 110px);
+        overflow-y: auto;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu {
+        position: sticky;
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        top: auto;
+        height: auto;
+        overflow-y: auto;
+        box-shadow: none;
+    }
+    header .navigation .categories .menus .item.tree:hover .mega-menu {
+        position: relative;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists {
+        position: relative;
+        left: 0;
+        height: auto;
+        width: 240px;
+        overflow-x: unset;
+        background-color: #f8f6ff;
+        padding: 0;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists {
+        row-gap: 0;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section {
+        width: auto;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title {
+        border-bottom: none;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px 12px 5px 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title .arrow,
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title .arrow {
+        border: none;
+        border-color: transparent;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title .arrow::before {
+        content: '';
+        border: solid #444;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        border-radius:2px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        right: 17px;
+        margin-top: 3px;
+        border-color: #777;
+        transition: all 0.3s ease 0s;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title.active .arrow::before {
+        content: '';
+        border: solid #444;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        border-radius:2px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        border-color: #ff5353;
+        right: 17px;
+        margin-top: 3px;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section > .title.active {
+        color: #ff5353;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f0f4ff;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists.active {
+        border-top: 1px solid #ddd;
+    }
+    header .navigation .categories .menus .item.tree .mega-menu .mega-lists > .list-section .sub-lists .list .link {
+        padding: 5px 10px 5px 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 575px) {}
+
+@media only screen and (max-width: 375px) {}

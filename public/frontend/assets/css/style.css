@@ -1,0 +1,289 @@
+
+/* Slide */
+.page-wrapper .slider .content h2 {
+    font-size: 50px !important;
+}
+
+/* Categories / Services */
+.page-wrapper .cat-service .items.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+} 
+.page-wrapper .cat-service .items .item {
+    padding: 40px 20px;
+}
+.page-wrapper .cat-service .items .item:nth-child(1),
+.page-wrapper .cat-service .items .item:nth-child(3) {
+    background-color: #f6f3fc;
+}
+.page-wrapper .cat-service .items .item:nth-child(2) {
+    background-color: #fcfaff;
+}
+.page-wrapper .cat-service .items .item h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.page-wrapper .cat-service .items .item .icon i {
+    color: #ff5353;
+    font-size: 30px;
+}
+
+
+
+/* Trending Categories */
+.page-wrapper .trending-categories .items .item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.page-wrapper .trending-categories .items .item::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: -1;
+}
+.page-wrapper .banner-section .item img {
+    max-width: 100%;
+}
+
+
+
+
+.compare-items .head {
+    border-right: 1px solid #ddd;
+    width: 10%;
+}
+.compare-items li .line {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+}
+.compare-items li .line:last-child {
+    border-bottom: 0px solid #ddd;
+}
+.compare-items li .line:nth-child(1){ height: 300px; }
+.compare-items li .line:nth-child(2){ height: 90px; }
+.compare-items li .line:nth-child(3){ height: 60px; }
+.compare-items li .line:nth-child(4){ height: 60px; }
+.compare-items li .line:nth-child(5){ height: 120px; }
+.compare-items li .line:nth-child(6){ height: 60px; }
+.compare-items li .line:nth-child(7){ height: 60px; }
+.compare-items .body {
+    width: 90%;
+    display: flex;
+}
+.compare-items li .line .image img {
+    width: 280px;
+    height: 280px;
+}
+.compare-items .body li {
+    border-right: 1px solid #ddd;
+}
+.compare-items .body li:last-child {
+    border-right: 0px solid #ddd;
+}
+
+
+/* Pages */
+.page-wrapper .banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.page-wrapper .banner::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.page-wrapper .banner .heading {
+    padding: 120px 0;
+}
+.page-wrapper .banner .heading h1 {
+    font-size: 50px;
+}
+.page-wrapper .banner .heading p {
+    font-size: 20px;
+}
+.page-wrapper .page-data .content {
+    position: relative;
+    background-color: #fff;
+    margin-top: -40px;
+    z-index: 1;
+}
+.page-wrapper .page-data .content > .title {
+    border-bottom: 2px solid #ff5353;
+    margin-bottom: 16px;
+    padding-bottom: 6px;
+    color: #444;
+}
+
+.page-wrapper .page-data .content .image img {
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.page-wrapper .page-data .content .text p {
+    font-size: 15px;
+    color: #777;
+}
+
+
+
+/* Drag Slide */
+.pdt-detail-view-data .multi-slides .icon {
+    width: 30px;
+    display: block !important;
+}
+.pdt-detail-view-data .multi-slides .icon i {
+    width: 30px;
+    height: 30px;
+}
+
+/* Empty */
+.cart-empty .empty .icon i {
+    font-size: 100px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+.cart-empty .empty p {
+    font-size: 16px;
+    color: #000;
+}
+.cart-empty .empty a {
+    padding: 12px 30px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* Maps */
+.google-maps .maps iframe {
+    width: 100% !important;
+    height: 450px !important;
+}
+
+/* ====================================== */
+/* Responsive */
+
+@media only screen and (max-width: 991px) {
+    /* Slider */
+    .page-wrapper .slider .content h2 {
+        font-size: 28px !important;
+        text-align: center;
+    }
+
+    /* Categories / Services */
+    .page-wrapper .cat-service .items .item {
+        padding: 24px 8px;
+    }
+
+    .google-maps .maps iframe {
+        height: 380px !important;
+    }
+    
+}
+
+@media only screen and (max-width: 767px) {
+    /* Slider */
+    .page-wrapper .slider .content h2 {
+        font-size: 30px !important;
+    }
+
+    /* Categories / Service */
+    .page-wrapper .cat-service .items.grid {
+        grid-template-columns: 1fr !important;
+    }
+    .page-wrapper .cat-service .items.grid {
+        grid-template-columns: 1fr !important;
+    }
+    .page-wrapper .cat-service .items .item {
+        padding: 12px 20px !important;
+    }
+    .page-wrapper .cat-service .items .col-lg-4:nth-child(1) .item,
+    .page-wrapper .cat-service .items .col-lg-4:nth-child(2) .item {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Trending Categories */
+    .page-wrapper .trending-categories .items .item {
+        padding: 12px 8px !important;
+    }
+    .page-wrapper .trending-categories .items .item h4 {
+        font-size: 17px;
+    }
+    .page-wrapper .trending-categories .items .item a {
+        margin-top: 6px !important;
+    }
+
+    /* Pages */
+    .page-wrapper .content .text {
+        margin-top: 24px;
+    }
+    .google-maps .maps iframe {
+        height: 340px !important;
+    }
+
+    /* Footer */
+    footer .widgets {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        row-gap: 24px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    /* Top Navbar */
+    .top-navbar ul {
+        justify-content: center !important;
+    }
+
+    /* Trending Categories */
+    .page-wrapper .trending-categories .heading {
+        margin-bottom: 8px;
+    }
+    .page-wrapper .trending-categories .items .item {
+        padding: 20px 12px !important;
+    }
+    .page-wrapper .trending-categories .items .row > .py-3 {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+    }
+
+    /* =========*/
+    /* Invoice */
+    .invoice-name .logo img {
+        width: 200px;
+    }
+
+    .google-maps .maps iframe {
+        height: 300px !important;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    /* ====================================== */
+    /* Invoice */
+    .invoice-name .logo img {
+        width: 180px;
+    }
+
+    .google-maps .maps iframe {
+        height: 270px !important;
+    }
+}
